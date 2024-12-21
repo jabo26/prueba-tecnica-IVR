@@ -1,0 +1,28 @@
+.navbar {
+  z-index: 1201; /* Por encima del drawer */
+}
+
+.menu-button {
+  margin-right: 16px;
+}
+
+.title {
+  flex-grow: 1;
+}
+
+.user-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+}
+
+.navbar-logo {
+  height: 40px;
+  margin-right: 16px;
+}

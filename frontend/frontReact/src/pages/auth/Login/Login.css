@@ -1,0 +1,134 @@
+/* Login.css */
+.login-container {
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+.login-grid {
+  min-height: 100vh;
+}
+
+.login-banner {
+  background: linear-gradient(135deg, #1976d2 0%, #1565c0 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-content {
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+
+.login-logo {
+  width: 200px;
+  margin-bottom: 32px;
+}
+
+.banner-title {
+  margin-bottom: 16px !important;
+  font-weight: 700 !important;
+}
+
+.banner-subtitle {
+  opacity: 0.9;
+}
+
+.login-form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+  background-color: #f5f5f5;
+}
+
+.login-paper {
+  width: 100%;
+  max-width: 400px;
+  padding: 40px;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.login-title {
+  margin-bottom: 32px !important;
+  color: #1976d2;
+  font-weight: 600 !important;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.login-alert {
+  margin-bottom: 24px;
+}
+
+/* Responsividad para móviles */
+@media (max-width: 960px) {
+  .login-banner {
+    min-height: 200px;
+    padding: 24px;
+  }
+
+  .login-form-container {
+    padding: 24px;
+  }
+
+  .login-paper {
+    padding: 24px;
+  }
+
+  .banner-title {
+    font-size: 24px !important;
+  }
+
+  .banner-subtitle {
+    font-size: 16px !important;
+  }
+}
+
+.login-container {
+  min-height: 100vh;
+  background-color: #ffffff;
+  overflow: hidden; /* Esto evitará cualquier desbordamiento */
+  width: 100vw; /* Asegura que tome todo el ancho de la ventana */
+}
+
+.login-grid {
+  min-height: 100vh;
+  margin: 0 !important; /* Elimina cualquier margen del Grid container */
+  width: 100% !important; /* Asegura que el grid tome todo el ancho */
+}
+
+/* Asegura que los Grid items tomen el espacio completo */
+.login-banner, .login-form-container {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.login-form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px !important;
+  background-color: #f5f5f5;
+}
+
+/* Efecto de fondo en el banner */
+.login-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+}

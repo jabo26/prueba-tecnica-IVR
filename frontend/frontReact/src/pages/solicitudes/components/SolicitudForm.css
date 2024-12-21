@@ -1,0 +1,10 @@
+.solicitud-form-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 8px 0;
+}
+
+.dialog-content {
+  padding: 20px;
+}

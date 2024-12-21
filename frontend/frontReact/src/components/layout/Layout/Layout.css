@@ -1,0 +1,31 @@
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.layout-content {
+  display: flex;
+  flex: 1;
+  height: calc(100vh - 64px); 
+}
+
+.main-content {
+  flex: 1;
+  padding: 24px;
+  background-color: #f5f5f5;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.main-content-with-sidebar {
+  margin-left: 240px; 
+  width: calc(100% - 240px);
+  transition: margin-left 225ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+}
+
+.main-content-without-sidebar {
+  margin-left: 0;
+  width: 100%;
+  transition: margin-left 225ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+}

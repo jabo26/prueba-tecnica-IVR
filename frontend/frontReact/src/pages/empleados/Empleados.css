@@ -1,0 +1,32 @@
+.empleados-container {
+  padding: 84px 0 0 0;
+  width: 100%;
+  margin: 0;
+}
+
+.empleados-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding: 0 24px;
+}
+
+.tabla-container {
+  margin-top: 20px;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+}
+
+/* Estilos para la tabla */
+.MuiTableContainer-root {
+  margin: 0;
+  width: 100%;
+  border-radius: 0;
+}
+
+.MuiPaper-root {
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
