@@ -9,11 +9,13 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  *
  * @author Vanessa
  */
+@SpringBootApplication
 public class AplicacionNomina implements CommandLineRunner {
     private final CalculadorFechaPago calculadorFechaPago;
     private final DateTimeFormatter formatoFecha = DateTimeFormatter.ofPattern("yyyy-MM-dd");
@@ -29,20 +31,28 @@ public class AplicacionNomina implements CommandLineRunner {
     @Override
     public void run(String... args) {
         // Ejemplos de prueba
-        LocalDate[] fechasPrueba = {
-            LocalDate.of(2024, 2, 5),
-            LocalDate.of(2024, 3, 30),
-            LocalDate.of(2024, 6, 30),
-            LocalDate.of(2024, 7, 15)
-        };
+//        LocalDate[] fechasPrueba = {
+//            LocalDate.of(2024, 2, 5),
+//            LocalDate.of(2024, 3, 30),
+//            LocalDate.of(2024, 6, 30),
+//            LocalDate.of(2024, 7, 15)
+//        };
 
-        System.out.println("Calculando fechas de pago de nómina...\n");
-        
-        for (LocalDate fecha : fechasPrueba) {
-            LocalDate fechaPago = calculadorFechaPago.obtenerProximaFechaPago(fecha);
+try {
+            if (args.length == 0) {
+                System.out.println("Por favor ingrese una fecha en formato yyyy-MM-dd");
+                return;
+            }
+
+            LocalDate fechaEntrada = LocalDate.parse(args[0], formatoFecha);
+            LocalDate fechaPago = calculadorFechaPago.obtenerProximaFechaPago(fechaEntrada);
+            
             System.out.printf("Fecha ingresada: %s, Próxima fecha de pago: %s%n", 
-                            fecha.format(formatoFecha), 
+                            fechaEntrada.format(formatoFecha), 
                             fechaPago.format(formatoFecha));
+                            
+        } catch (Exception e) {
+            System.out.println("Error: Formato de fecha inválido. Use el formato yyyy-MM-dd");
         }
     }
 }
