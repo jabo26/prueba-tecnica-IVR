@@ -1,0 +1,37 @@
+{
+	"info": {
+		"_postman_id": "c9e648bd-8b9c-46b4-ad7c-0d34b78aee2b",
+		"name": "API_NOMINA_JAVA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40578849"
+	},
+	"item": [
+		{
+			"name": "GETFechaPagoNomina",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/nomina/fecha-pago?fecha=2024-02-05",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"nomina",
+						"fecha-pago"
+					],
+					"query": [
+						{
+							"key": "fecha",
+							"value": "2024-02-05"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
